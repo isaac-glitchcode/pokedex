@@ -6,8 +6,8 @@ import './App.css';
 
 function App(){
   
-  const [types, setTypes] = useState(["Grass", "Poison", "Fire", "Water", "Flying", "Bug", "Normal", "Electric", "Ground", "Fairy", "Psychic", "Ghost","Ice", "Fight", "Dragon", "Steel", "Rock"]);
-  const [pokemons, setPokemons] = useState([
+  const [types] = useState(["Grass", "Poison", "Fire", "Water", "Flying", "Bug", "Normal", "Electric", "Ground", "Fairy", "Psychic", "Ghost","Ice", "Fight", "Dragon", "Steel", "Rock"]);
+  const [pokemons] = useState([
   {
     "id": 1,
     "name": {
