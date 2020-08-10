@@ -1,38 +1,352 @@
-.App {
-  text-align: center;
+body{
+  /* background-color: #7eb2f9; */
+  background-image: url("https://uadevs.files.wordpress.com/2016/05/headervgc.png");
+  background-size: auto;
+  overflow: hidden;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container:nth-child(2){
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 2em 0em;
+ 
+}
+
+.App {
+  display:flex;
+  padding: 0% 5%;
+  width: 85%;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height:550px;
+  border: 9px double  rgba(69, 193, 241, 0.815);
+  margin: 22px;
+  background-color: rgba(28, 141, 185, 0.815);
+  
+  border-radius: 70px;
+ 
+}
+.App>div::after{
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  left: 300px;
+  background: -webkit-gradient(linear,left top, right top,from(#72dcf7),to(#5cb2e4df));
+  background: linear-gradient(to right,#72dcf7,#5cb2e4df);
+  animation: animate2 2s linear infinite;
+  box-shadow: 10px 10px 20px rgba(84, 17, 139, 0.815);
+  animation-delay: .5s;
+  z-index: 0;
+}
+.App>div::before{
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+  top: 500px;
+  background: -webkit-gradient(linear,left top, right top,from(#72dcf7),to(#5cb2e4df));
+  background: linear-gradient(to right,#72dcf7,#5cb2e4df);
+  animation: animate1 2s linear infinite;
+  z-index: 0;
 }
 
-.App-link {
-  color: #61dafb;
+.App>span:nth-child(1){
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+  top:200px;
+  background: -webkit-gradient(linear,left top, right top,from(#72dcf7),to(#5cb2e4df));
+  background: linear-gradient(to right,#72dcf7,#5cb2e4df);
+  animation: animate3 5s linear infinite;
+  animation-delay: .6s;
+  z-index: 0;
+}
+.App>span:nth-child(2){
+  content: "";
+  position: absolute;
+  display: block;
+  width: 2px;
+  height: 100%;
+  right: 480px;
+  background: -webkit-gradient(linear,left top, right top,from(#72dcf7),to(#5cb2e4df));
+  background: linear-gradient(to right,#72dcf7,#5cb2e4df);
+  animation: animate4 1s linear infinite;
+  animation-delay: .5s;
+  z-index: 0;
+}
+.App>span:nth-child(3){
+  content: "";
+  position: absolute;
+  display: block;
+  width: 2px;
+  height: 100%;
+  right: 80px;
+  background: -webkit-gradient(linear,left top, right top,from(#72dcf7),to(#5cb2e4df));
+  background: linear-gradient(to right,#72dcf7,#5cb2e4df);
+  animation: animate4 3s linear infinite;
+  animation-delay: .9s;
+  z-index: 0;
+}
+@keyframes animate1{
+  0%{
+      -webkit-transform: translateX(-100%);
+              transform: translateX(-100%);   
+  }
+  
+  100%{
+      -webkit-transform: translateX(100%);
+              transform: translateX(100%);        
+  }
+}
+@keyframes animate2{
+  0%{
+      -webkit-transform: translateY(-100%);
+              transform: translateY(-100%);
+          
+  }
+  
+  100%{
+   
+      -webkit-transform: translateY(100%);
+              transform: translateY(100%);
+              
+  }
+}
+@keyframes animate3{
+  0%{
+      -webkit-transform: translateX(100%);
+              transform: translateX(100%);
+          
+  }
+  
+  100%{
+   
+      -webkit-transform: translateX(-100%);
+              transform: translateX(-100%);
+              
+  }
+}
+@keyframes animate4{
+  0%{
+      -webkit-transform: translateY(100%);
+              transform: translateY(100%);
+          
+  }
+  
+  100%{
+   
+      -webkit-transform: translateY(-100%);
+              transform: translateY(-100%);
+              
+  }
+}
+.App>div{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  padding: 0% 6% 0% 2%;
+  margin: 10px;
+  overflow:scroll;
+  z-index: 1000;
+}
+.App>div::-webkit-scrollbar {
+  width: 9px;   
+  height: 0px;    
+  
+}
+.App>div::-webkit-scrollbar-thumb {
+  background: rgb(224, 228, 228);
+  border-radius: 5px;
+  border: 1px double  rgba(23, 24, 24, 0.558);
+  
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.types{
+  display: inline-block;
+  background-color: chocolate;
+  padding: 5px 10px;
+  margin-right: 10px;
+  color: #FFF;
+  border-radius: 4px; 
+  margin-bottom: 5px;
 }
+
+.filters{
+  margin: 1em;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  column-gap: 40px;
+  row-gap: 20px;
+  padding: 0 ;
+  width: 13%;
+  border: 9px double  rgba(69, 193, 241, 0.815);
+  margin: 12px;
+  background-color: rgba(28, 141, 185, 0.815);
+  border-radius: 70px;
+  
+}
+.filters>form>input{
+  background-color: transparent;
+  border: 0;
+  color: #fff;
+  outline: none;
+  margin-left: 5px;
+ 
+}
+
+.filters>select{
+  appearance: none;
+  background:rgba(28, 141, 185, 0.815);
+  width: 100%;
+  border: transparent;
+  color: #FFF;
+  cursor:pointer;
+  outline: 0;
+  margin:0 50%;
+}
+
+.filters>i{
+	right: 20px;
+  top:0;
+  margin: 2px 0;
+	width: 6px;
+	height: 6px;
+	display: block;
+	border-left:4px solid #e8eeeb;
+  border-bottom:4px solid #e8eeeb;
+  border-radius: 20%;
+	transform: rotate(-45deg); /* Giramos el cuadrado */
+	transition: all 0.25s ease;
+}
+
+.card{
+  display: flex;
+  flex-direction: column;
+  
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+.card>img{
+  cursor: pointer;
+}
+
+ul>li{
+  list-style: none;
+}
+.Grass{
+  background-color: rgba(0, 200, 0, 0.7);
+}
+.Fire{
+  background-color: rgba(231, 70, 6, 0.7);
+}
+.Water{
+  background-color: rgba(53, 86, 236, 0.7);
+}
+.Poison{
+  background-color: rgba(120, 9, 211, 0.7);
+}
+.Flying{
+  background-color: rgba(42, 180, 185, 0.7);
+}
+.Bug{
+  background-color: rgba(22, 149, 54, 0.7);
+}
+.Electric{
+  background-color: rgba(255, 255, 0, 0.7);
+}
+.Ground{
+  background-color: rgba(194, 94, 12, 0.7);
+}
+.Rock{
+  background-color: rgba(209, 170, 96, 0.7);
+}
+.Fairy{
+  background-color: rgba(235, 106, 174, 0.7);
+}
+.Psychic{
+  background-color: rgba(180, 42, 185, 0.7);
+}
+.Ghost{
+  background-color: rgba(80, 3, 116, 0.7);
+}
+.Ice{
+  background-color: rgba(20, 167, 204, 0.7);
+}
+.Fight{
+  background-color: rgba(204, 161, 243, 0.7);
+}
+.Dragon{
+  background-color: rgba(24, 5, 190, 0.7);
+}
+.Steel{
+  background-color: rgba(41, 57, 87, 0.7);
+}
+
+.container>div{
+  display:flex;
+}
+
+
+.pokemon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:100%;
+  /* background-color: #fff; */
+  padding-left:24%;
+  margin:auto;
+  color:whitesmoke;
+
+}
+.pokemon>.base{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  background:rgba(52, 190, 245, 0.2);
+  border-radius:10px;
+  padding:5%; 
+  margin: auto;
+  text-align: center; 
+  border: 9px double  rgba(69, 193, 241, 0.815);
+}
+.pokemon>.base>.type{
+  display: flex;
+}
+.pokemon>img{
+  max-width:60%;
+  margin:0 12px;
+  
+}
+.radar{
+  background:rgba(73, 190, 236, 0.2);
+  border: 9px double  rgba(69, 193, 241, 0.815);
+  border-radius:10px;
+  padding:12px 0;
+  margin: 0 10px;
+
+  
+}
+/* .pokemon .base .icon{
+  
+  background-color:blue;
+  
+}
+.pokemon{
+  position:relative;
+  
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  
+
+}
+
+.pokemon>img{
+  
+  position:absolute;
+  z-index:-2;
+  
+} */
