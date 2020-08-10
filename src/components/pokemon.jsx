@@ -4,39 +4,37 @@ import {Radar} from 'react-chartjs-2';
 export default function Pokemon(props){
     const [chartData, setChartData] = useState({});
 
-    const chart = () =>{
-        setChartData({
-            labels:['HP','ATTACK', 'DEFENSE', 'SPEED', 'SP.ATTACK', 'SP.DEFENSE'],
-            datasets:[
-                {
-                    
-                    data:[
-                        props.pokemon.base.HP, 
-                        props.pokemon.base.Attack, 
-                        props.pokemon.base.Defense, 
-                        props.pokemon.base.Speed,
-                        props.pokemon.base.Sp_Attack,
-                        props.pokemon.base.Sp_Defense
-                    ],
-                    backgroundColor:['rgba(22, 149, 152, 0.8)']
-
-                }
-            ]
-        })
-    }
-
     useEffect(()=>{
+        const chart = () =>{
+            setChartData({
+                labels:['HP','ATTACK', 'DEFENSE', 'SPEED', 'SP.ATTACK', 'SP.DEFENSE'],
+                datasets:[
+                    {
+                        
+                        data:[
+                        
+                            props.pokemon.base.HP,
+                            props.pokemon.base.Attack, 
+                            props.pokemon.base.Defense, 
+                            props.pokemon.base.Speed,
+                            props.pokemon.base.Sp_Attack,
+                            props.pokemon.base.Sp_Defense
+                        ],
+                        backgroundColor:['rgba(22, 149, 152, 0.8)']
+    
+                    }
+                ]
+            })
+        }
         chart();
+        
         let crie = new Audio(props.pokemon.crie);
-        crie.play();
-    },[])
+        crie.play();    
+    },[props])
     
     return (
         <div className="pokemon">
            
-            {/* <img src="https://raw.githubusercontent.com/duiker101/pokemon-type-svg-icons/5781623f147f1bf850f426cfe1874ba56a9b75ee/icons/poison.svg" alt=""/> */}
-                
-                
             <div className="base">
                 <div>
                     <h2>No.{props.pokemon.id}</h2>

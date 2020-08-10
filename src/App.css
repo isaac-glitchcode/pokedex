@@ -296,7 +296,6 @@ ul>li{
   justify-content: center;
   align-items: center;
   width:100%;
-  /* background-color: #fff; */
   padding-left:24%;
   margin:auto;
   color:whitesmoke;
@@ -330,23 +329,3 @@ ul>li{
 
   
 }
-/* .pokemon .base .icon{
-  
-  background-color:blue;
-  
-}
-.pokemon{
-  position:relative;
-  
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  
-
-}
-
-.pokemon>img{
-  
-  position:absolute;
-  z-index:-2;
-  
-} */
