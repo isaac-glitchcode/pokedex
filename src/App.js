@@ -1837,7 +1837,7 @@ function App(){
     ],
     "crie": "https://raw.githubusercontent.com/isaac-glitchcode/pokemon-g1-cries/master/083%20-%20Farfetch'd.wav",
     "sprite": "https://projectpokemon.org/images/sprites-models/pgo-sprites/pokemon_icon_083_00.png",
-    "animation":"https://raw.githubusercontent.com/isaac-glitchcode/pokemon-g1-sprites/master/Farfetch'd.gif",
+    "animation":"https://raw.githubusercontent.com/isaac-glitchcode/pokemon-g1-sprites/master/Farfetchd.gif",
     "base": {
       "HP": 52,
       "Attack": 90,
