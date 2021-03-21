@@ -51,6 +51,7 @@ export default function Pokemon(props){
             </div>
             
             <img src={props.pokemon.animation} alt={props.pokemon.name.english}/>
+            
             <div className="radar">
                 <Radar data={chartData} options={
                     {

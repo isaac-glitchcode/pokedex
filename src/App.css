@@ -48,7 +48,7 @@ body{
   background: -webkit-gradient(linear,left top, right top,from(#72dcf7),to(#5cb2e4df));
   background: linear-gradient(to right,#72dcf7,#5cb2e4df);
   animation: animate1 2s linear infinite;
-  z-index: 0;
+  z-index: -1;
 }
 
 .App>span:nth-child(1){
