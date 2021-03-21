@@ -1,0 +1,23 @@
+.name{
+    margin: 1em;
+    position: relative;
+    
+    width: 12em;
+    margin: 12px;
+
+    background:rgba(28, 141, 185, 0.815);
+    border: 9px double  rgba(69, 193, 241, 0.815);
+    border-radius: 70px;
+    
+}
+.name>form>input{
+    background-color: transparent;
+    border: 0;
+    color: #fff;
+    outline: none;
+    margin-left: 5px;
+    padding: 1em;
+    width: 100%;
+
+   
+}
