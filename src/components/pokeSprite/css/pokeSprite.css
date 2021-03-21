@@ -1,0 +1,12 @@
+
+.sprite>img{
+    cursor: pointer;
+    /* width: 100%; */
+}
+
+@media screen and (max-width:786px){
+    .sprite>img{
+        cursor: pointer;
+        width: 100%;
+    }
+}

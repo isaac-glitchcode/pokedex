@@ -1,8 +1,9 @@
 import React, {useState} from 'react';
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
-import Card from './components/card';
-import Pokemon from './components/pokemon';
+import Sprite from './components/pokeSprite/pokeSprite';
+import Pokemon from './components/pokemon/pokemon';
 import './App.css';
+import FilterContent from './components/filters/filterContent';
 
 function App(){
   
@@ -3302,7 +3303,7 @@ function App(){
 
   return (
     <div className="container">
-      <div>
+      {/* <div className="content-filter">
         <div className="filters">
           <select onChange={handleTypeSelect}>
             <option key={0}  defaultValue="All">All</option>
@@ -3321,7 +3322,8 @@ function App(){
             <input type="text" onChange={handleText} />
           </form>
         </div>
-      </div>
+      </div> */}
+      <FilterContent handleTypeSelect={handleTypeSelect} handleText={handleText} types={types}/>
       <div className="App">
         <span></span>
         <span></span>
@@ -3338,7 +3340,7 @@ function App(){
                       return pokemon.name.english.includes(namePoke)
                     }).map((pokemon, index)=> {
                     return (
-                    <Link to="/pokemon" key={index}><Card pokemon = {pokemon}  handle={selectPokemon}/></Link>
+                    <Link to="/pokemon" key={index}><Sprite pokemon = {pokemon}  handle={selectPokemon}/></Link>
                     )
                   }) 
                 }

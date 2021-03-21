@@ -1,6 +1,13 @@
 @media screen and (max-width:786px){
     .App{
+        display: grid;
         background: green;
+        width: 100%;
+        grid-template-columns: repeat(3,1fr);
+        /* padding: 0% 0% 0% 2%; */
+        margin: 10px;
+        overflow:scroll;
+        z-index: 1000;
     }
     /* .App>div{
         padding: 0% ;

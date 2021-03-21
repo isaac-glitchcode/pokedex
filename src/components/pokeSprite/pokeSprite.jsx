@@ -1,6 +1,7 @@
 import React, {useEffect} from 'react';
+import './css/pokeSprite.css';
 
-export default function Card(props){
+export default function Sprite(props){
    
     useEffect(()=>{
         return()=>{
@@ -9,15 +10,16 @@ export default function Card(props){
     },[])
    
     return (
-        <div className="card">
+        <div className="sprite">
             
-            <img src={props.pokemon.sprite} alt={props.pokemon.name.english} onClick={()=>{
-                
-                props.handle(props.pokemon)
-            }}/>
-           
-            
-            
+            <img 
+                src={props.pokemon.sprite} 
+                alt={props.pokemon.name.english} 
+                onClick={()=>{
+                    props.handle(props.pokemon)
+                }}
+            />
+
         </div>
     )
 }
