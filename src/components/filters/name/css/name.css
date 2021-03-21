@@ -21,3 +21,13 @@
 
    
 }
+
+/*Responsive*/
+@media screen and (max-width:786px){
+    .name{
+        width: 8em; 
+        border: 5px double  rgba(69, 193, 241, 0.815);
+        transition: all .4s ease;
+    } 
+    
+}

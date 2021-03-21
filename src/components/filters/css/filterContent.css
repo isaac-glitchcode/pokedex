@@ -1,8 +1,7 @@
 .content-filter{
-    /* background: pink; */
-    display:grid;
-    grid-template-columns: 1fr 1fr;
-    justify-content: center;
-    align-items: center;
-
+    position:relative;
+    width: 90%;
+    display:flex;
+    margin:auto;
+    justify-content:center;
 }

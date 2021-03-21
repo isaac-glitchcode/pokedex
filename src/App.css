@@ -1,164 +1,58 @@
 @import url('./css/bg_animations.css');
-/* @import url('responsive.css'); */
 body{
-  /* background-color: #7eb2f9; */
   background-image: url("https://uadevs.files.wordpress.com/2016/05/headervgc.png");
   background-size: auto;
   overflow: hidden;
 }
-.container{
-  /* background: blue; */
+.main {
+  width: 90%;
+  height:550px;
+  display: grid;
+  margin:auto;
+  justify-content: center;
+  
+  border: 9px double  rgba(69, 193, 241, 0.815);
+  background:rgba(52, 190, 245, 0.2);
+  border-radius:10px;
+  transition: all 0.5s ease;
+
+}
+.content-filter{
+  grid-area: content-filter;
 }
 
-.App {
-  /* background: red; */
-  display:grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  /* padding: 0% 5%; */
-  /* width: 85%; */
-  justify-content: center;
-  height:550px;
-  border: 9px double  rgba(69, 193, 241, 0.815);
-  /* margin: 22px; */
-  /* background-color: rgba(28, 141, 185, 0.815); */
-  border-radius: 50px;
-  /* display:flex;
-  padding: 0% 5%;
-  width: 85%;
-  justify-content: center;
-  height:550px;
-  border: 9px double  rgba(69, 193, 241, 0.815);
-  margin: 22px;
-  background-color: rgba(28, 141, 185, 0.815);
-  border-radius: 70px; */
- 
-}
-
-.App>div{
+.list{
+  grid-area: list;
   display: grid;
   width: 100%;
   grid-template-columns: repeat(3,1fr);
-  padding: 0% 2%;
+  padding: 0 2em 0 1em;
   margin: 10px;
   overflow:scroll;
   z-index: 1000;
+  gap:.4em;
 }
-.App>div::-webkit-scrollbar {
+.list::-webkit-scrollbar {
   width: 9px;   
   height: 0px;    
   
 }
-.App>div::-webkit-scrollbar-thumb {
+.list::-webkit-scrollbar-thumb {
   background: rgb(224, 228, 228);
   border-radius: 5px;
   border: 1px double  rgba(23, 24, 24, 0.558);
   
 }
-
-/* .card{
-  display: flex;
-  flex-direction: column;
-  
-  justify-content: center;
-  align-items: center;
-  border-radius: 5px;
-}
-.card>img{
-  cursor: pointer;
-} */
-
-ul>li{
-  list-style: none;
-}
-.Grass{
-  background-color: rgba(0, 200, 0, 0.7);
-}
-.Fire{
-  background-color: rgba(231, 70, 6, 0.7);
-}
-.Water{
-  background-color: rgba(53, 86, 236, 0.7);
-}
-.Poison{
-  background-color: rgba(120, 9, 211, 0.7);
-}
-.Flying{
-  background-color: rgba(42, 180, 185, 0.7);
-}
-.Bug{
-  background-color: rgba(22, 149, 54, 0.7);
-}
-.Electric{
-  background-color: rgba(255, 255, 0, 0.7);
-}
-.Ground{
-  background-color: rgba(194, 94, 12, 0.7);
-}
-.Rock{
-  background-color: rgba(209, 170, 96, 0.7);
-}
-.Fairy{
-  background-color: rgba(235, 106, 174, 0.7);
-}
-.Psychic{
-  background-color: rgba(180, 42, 185, 0.7);
-}
-.Ghost{
-  background-color: rgba(80, 3, 116, 0.7);
-}
-.Ice{
-  background-color: rgba(20, 167, 204, 0.7);
-}
-.Fight{
-  background-color: rgba(204, 161, 243, 0.7);
-}
-.Dragon{
-  background-color: rgba(24, 5, 190, 0.7);
-}
-.Steel{
-  background-color: rgba(41, 57, 87, 0.7);
-}
-
-.container>div{
-  display:flex;
-}
-
-
-.pokemon{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width:100%;
-  padding-left:24%;
-  margin:auto;
-  color:whitesmoke;
-
-}
-.pokemon>.base{
-  display:flex;
-  flex-direction: column;
-  justify-content: center;
-  background:rgba(52, 190, 245, 0.2);
-  border-radius:10px;
-  padding:5%; 
-  margin: auto;
-  text-align: center; 
-  border: 9px double  rgba(69, 193, 241, 0.815);
-}
-.pokemon>.base>.type{
-  display: flex;
-}
-.pokemon>img{
-  max-width:60%;
-  margin:0 12px;
-  
-}
-.radar{
-  background:rgba(73, 190, 236, 0.2);
-  border: 9px double  rgba(69, 193, 241, 0.815);
-  border-radius:10px;
-  padding:12px 0;
-  margin: 0 10px;
-
-  
+/*Responsive*/
+@media screen and (max-width:940px){
+  .main {
+    height:85vh;
+    display: grid;
+    justify-content: center;
+    transition: all 0.5s ease;
+  }
+  .list{
+    padding: 0;
+    margin: 0;
+  }
 }

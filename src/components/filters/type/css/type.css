@@ -3,13 +3,13 @@
     position: relative;
     
     width: 12em;
-    margin: 12px;
+    margin: 0.75rem;
 
     background:rgba(28, 141, 185, 0.815);
     border: 9px double  rgba(69, 193, 241, 0.815);
     border-radius: 70px;
     
-}
+} 
   
 select{
     appearance: none;
@@ -23,6 +23,17 @@ select{
     outline: 0;
     z-index: 100;
 }  
+select .opt{
+    padding: 1em ;
+    background: rgb(35, 78, 143);
+    left:-70px;
+    transition-property:left;
+    transition-duration:.1s;
+    cursor:pointer;
+    transition: all 0.3s ease;
+    
+   
+}  
   
 .normal{
     position:absolute;
@@ -35,7 +46,7 @@ select{
     border-left:4px solid #e8eeeb;
     border-bottom:4px solid #e8eeeb;
     border-radius: 20%;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease ;
     transform: rotate(-130deg);
     cursor:pointer;
 } 
@@ -55,3 +66,17 @@ select{
     transform: rotate(-45deg); 
     transition: all 0.3s ease;
 } 
+
+/*Responsive*/
+
+@media screen and (max-width:786px){
+    .type{
+        width: 8em; 
+        border: 5px double  rgba(69, 193, 241, 0.815);
+        transition: all .4s ease;
+    } 
+    select{
+        width: 100%;
+        appearance: none; 
+    }
+}

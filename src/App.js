@@ -3302,58 +3302,44 @@ function App(){
   }
 
   return (
-    <div className="container">
-      {/* <div className="content-filter">
-        <div className="filters">
-          <select onChange={handleTypeSelect}>
-            <option key={0}  defaultValue="All">All</option>
-            {
-              types.map((type, index)=>{
-                return(
-                <option key={index +1} value={type}>{type}</option>
-                )
-              })
-            }
-          </select>
-          <i></i>
-        </div>
-        <div className="filters">
-          <form>
-            <input type="text" onChange={handleText} />
-          </form>
-        </div>
-      </div> */}
-      <FilterContent handleTypeSelect={handleTypeSelect} handleText={handleText} types={types}/>
+    
+      
       <div className="App">
         <span></span>
         <span></span>
         <span></span>
-       <div>
-        <Router>
-            <Switch>
-              <Route exact path="/">
-                {
-                  pokemons.filter(pokemon =>{
-                    return typeSelected==="All"? true : 
 
-                    pokemon.type.includes(typeSelected)}).filter(pokemon=>{
-                      return pokemon.name.english.includes(namePoke)
-                    }).map((pokemon, index)=> {
-                    return (
-                    <Link to="/pokemon" key={index}><Sprite pokemon = {pokemon}  handle={selectPokemon}/></Link>
-                    )
-                  }) 
-                }
-              </Route>
-              <Route path="/pokemon">
-                <Pokemon pokemon={pokeSelected} />
-              </Route>
-            </Switch>
-          </Router>
-          {console.log(pokeSelected)}
+      <div className="filters">
+        <FilterContent handleTypeSelect={handleTypeSelect} handleText={handleText} types={types}/>
+      </div>
+      <div className="main">
+        
+        <div className="list">
+          
+            <Router>
+              <Switch>
+                <Route exact path="/">
+                  {
+                    pokemons.filter(pokemon =>{
+                      return typeSelected==="All"? true : 
+
+                      pokemon.type.includes(typeSelected)}).filter(pokemon=>{
+                        return pokemon.name.english.includes(namePoke)
+                      }).map((pokemon, index)=> {
+                      return (
+                      <Link to="/pokemon" key={index}><Sprite pokemon = {pokemon}  handle={selectPokemon}/></Link>
+                      )
+                    }) 
+                  }
+                </Route>
+                <Route path="/pokemon">
+                  <Pokemon pokemon={pokeSelected} />
+                </Route> 
+              </Switch>
+            </Router>
+          </div>
        </div>      
       </div>
-    </div>
   );
 }
 
