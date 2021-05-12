@@ -1,4 +1,6 @@
 import React, {useState, useEffect} from 'react';
+import { Link } from 'react-router-dom';
+
 import {Radar} from 'react-chartjs-2';
 import './css/pokemon.css';
 
@@ -86,6 +88,12 @@ export default function Pokemon(props){
                 }/>
             </div>
             
+            <div>
+                <Link to="/">
+                    <button className="btn-back">Back</button>
+                </Link>
+                
+            </div>
             
         </div>
     )
