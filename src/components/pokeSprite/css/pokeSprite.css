@@ -4,7 +4,7 @@
     width: 100%;
 }
 
-@media screen and (max-width:786px){
+@media screen and (max-width:1080px){
     .sprite>img{
         cursor: pointer;
         width: 90%;

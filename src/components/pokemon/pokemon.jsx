@@ -43,7 +43,7 @@ export default function Pokemon(props){
                     <h2>No.{props.pokemon.id}</h2>
                 </div>
                 <div>
-                    <h2>{props.pokemon.name.english}</h2>
+                    <h2>{props.pokemon.name}</h2>
                 </div>
                 <div className="type">
                     {props.pokemon.type.map((type, index)=>{

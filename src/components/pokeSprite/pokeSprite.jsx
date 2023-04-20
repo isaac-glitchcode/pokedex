@@ -14,7 +14,7 @@ export default function Sprite(props){
             
             <img 
                 src={props.pokemon.sprite} 
-                alt={props.pokemon.name.english} 
+                alt={props.pokemon.name} 
                 onClick={()=>{
                     props.handle(props.pokemon)
                 }}

@@ -25,12 +25,12 @@ body{
   grid-area: list;
   display: grid;
   width: 100%;
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(6,1fr);
   padding: 0 2em 0 1em;
   margin: 10px;
   overflow:scroll;
   z-index: 1000;
-  gap:.4em;
+  gap:4em;
 }
 .list::-webkit-scrollbar {
   width: 9px;   
@@ -44,7 +44,7 @@ body{
   
 }
 /*Responsive*/
-@media screen and (max-width:940px){
+@media screen and (max-width:1080px){
   .main {
     height:85vh;
     display: grid;
